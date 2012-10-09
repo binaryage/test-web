@@ -1,2 +1,4 @@
+---
 url: http://totalfinder.binaryage.com
 markdown: rdiscount
+layouts: base/layouts
