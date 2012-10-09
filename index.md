@@ -52,7 +52,9 @@ shots: [{
     klass: "no-shadow"
 }]
 ---
- 
+
+TEST!
+
 <div class="main-content">
     <div class="features-separator"></div>
     <div class="highlights">
