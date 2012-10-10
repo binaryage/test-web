@@ -4840,7 +4840,7 @@ $.fn.autohash = function () {
 function prepareTweetLoader(msg) {
     return [
         '<li class="hentry status" id="tweet-loader">',
-        '<span class="thumb vcard author"><img width="31" height="31" src="/shared/img/twitter-loader.gif"></span>',
+        '<span class="thumb vcard author"><img width="31" height="31" src="/base/img/twitter-loader.gif"></span>',
         '<span class="status-body"><span class="tweet-msg">'+msg+'</span><a class="more-praise" target="_blank" href="http://twitter.com/binaryage/favorites">show all recent</a></span>',
         '</li>'
     ].join('');

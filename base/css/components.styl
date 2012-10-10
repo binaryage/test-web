@@ -4,14 +4,14 @@
     display: inline-block
     text-decoration: none
 
-sprite(x=0px, y=0px, w='auto', h='auto', img='/shared/img2/assets.png')
+sprite(x=0px, y=0px, w='auto', h='auto', img='/base/img2/assets.png')
     background transparent url(img) no-repeat (-(x)) (-(y)) !important
     width w
     height h
     display block
     absolute()
     
-topbar-button(iconx=276px, icony=62px, bg = topbar-bg-color, img='/shared/img2/assets.png')
+topbar-button(iconx=276px, icony=62px, bg = topbar-bg-color, img='/base/img2/assets.png')
     -reset()
     background transparent url(img) no-repeat (-(iconx)) (-(icony))
     float right
@@ -28,7 +28,7 @@ topbar-button(iconx=276px, icony=62px, bg = topbar-bg-color, img='/shared/img2/a
     &:hover
         cursor pointer
     
-menu-button(iconx=-10px, icony=63px, img='/shared/img2/assets.png')
+menu-button(iconx=-10px, icony=63px, img='/base/img2/assets.png')
     -reset()
     margin-left 12px
     & a
@@ -43,7 +43,7 @@ menu-button(iconx=-10px, icony=63px, img='/shared/img2/assets.png')
         line-height 24px
         text-decoration none
 
-product-button(iconx=-16px, icony=242px, img='/shared/img2/assets.png')
+product-button(iconx=-16px, icony=242px, img='/base/img2/assets.png')
     -reset()
     relative()
     cursor pointer
@@ -103,12 +103,12 @@ product-button(iconx=-16px, icony=242px, img='/shared/img2/assets.png')
     .opera & .trial-note
         display block
 
-minor-button(iconx=-16px, icony=242px, img='/shared/img2/assets.png')
+minor-button(iconx=-16px, icony=242px, img='/base/img2/assets.png')
     product-button(iconx, icony, img)
     font minor-button-font
     color minor-button-color
 
-popup-button(img='/shared/img2/assets.png')
+popup-button(img='/base/img2/assets.png')
     product-button(0px, 0px, img)
 
     & > div
@@ -118,7 +118,7 @@ popup-button(img='/shared/img2/assets.png')
         margin-left: 0px;
 
 
-tiny-button-icon(iconx=0px, icony=0px, img='/shared/img2/assets.png')
+tiny-button-icon(iconx=0px, icony=0px, img='/base/img2/assets.png')
     product-button(iconx, icony, img)
 
     font tiny-button-font
@@ -134,7 +134,7 @@ tiny-button-icon(iconx=0px, icony=0px, img='/shared/img2/assets.png')
         padding: 0px 4px;
         margin-left: 22px;
 
-tiny-button(img='/shared/img2/assets.png')
+tiny-button(img='/base/img2/assets.png')
     tiny-button-icon(0px, 0px, img)
 
     & > div
