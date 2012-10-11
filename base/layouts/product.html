@@ -1,0 +1,130 @@
+<div class="main-product" id="product-">
+    <div class="container">
+        <div class="main-product-left span-12">
+            <div class="product-logo-box">
+                <img class="product-icon" src="/base/img/icons/-64.png">
+                <div class="product-tagline">
+                    <h1 class="product-title"></h1><div class="plusone-wrapper"><g:plusone size="medium"></g:plusone></div>
+                    <h2 class="product-subtitle"></h2>
+                </div>
+            </div>
+            <div class="product-buttons-box">
+                <div class="product-buttons">
+                    
+                    
+                    <div class="clear"></div>
+                </div>
+                <div class="product-note-box">
+                    
+                </div>
+            </div>
+            <div class="social-box">
+                <div class="social-box-inner">
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <div class="clear"></div>
+            </div>    
+        </div>
+        <div class="main-product-right span-12 last">
+            <div class="main-screenshot">
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-tabs" id="tabs-">
+    <div class="container">
+        <div class="tab-bar">
+            <ul class="tabs"></ul> 
+        </div>
+        <div class="panes"></div>
+    </div>
+</div>
+
+<div class="main-content-here" style="display:none">
+    
+</div>
+
+<script>
+$(function() { 
+    var panes = $('.panes');
+    var tabs = $('.tabs');
+    var cur;
+    var items = $('.main-content-here > *');
+    items.each(function(i) {
+        var el = $(this);
+        var tag = el.attr('tagName');
+        if (tag=='SCRIPT') return;
+        if (tag=='NOSCRIPT') return;
+        if (tag=='STYLE') return;
+        if (el.hasClass('panes') || el.hasClass('tabs')) return;
+        if (el.attr('tagName')=='H2') {
+            var name = el.html();
+            var id = name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            var li = $('<li/>');
+            var a = $('<a class=\"tbx\"/>').attr('href', '#'+id).html(name);
+            li.append(a);
+            a.append('<div class="shadow"></div>');
+            tabs.append(li);
+            cur = $('<div/>').addClass('wikistyle').addClass(id);
+            panes.append(cur);
+            el.remove();
+            cur.append($("<h2/>").html(name));
+        } else {
+            if (cur) {
+                cur.append(el);
+            }
+        }
+    });
+    $("ul.tabs").tabs("div.panes > div");
+    $("ul.tabs a").history();
+});
+</script>
+
+<script>
+    $(function() {
+        $(".product-thumbs-scrollable").scrollable({
+            size: 5
+        });
+
+        $(".product-thumbs-items img").click(function() {
+            var img = $(this);
+            var visible = $('.screenshot-box:visible');
+            var box = $(img.attr('rel'));
+            if (box[0] === visible[0]) return; // optimization to not fade when clicked same image or during initial load
+            visible.fadeOut();
+            box.fadeIn();
+        }).filter(":first").click(); // when page loads simulate a "click" on the first image
+    });
+</script>
+
+<div class="simple_overlay" id="overlay-gallery" style="display:none"> 
+    <a class="overlay-prev">prev</a> 
+    <a class="overlay-next">next</a> 
+    <div class="overlay-info"></div>
+    <img class="overlay-progress" src="http://totalfinder.binaryage.com/base/img/twitter-loader.gif" /> 
+</div>
+
+<script>
+(function() {
+    $('.overlayable').overlay({
+        expose: '#f1f1f1',
+        target: '#overlay-gallery'
+    }).gallery({
+        disabledClass: 'disabled-overlay',
+        prev: '.overlay-prev',
+        next: '.overlay-next',
+        info: '.overlay-info',
+        progress: '.overlay-progress',
+        opacity: 1,
+        speed: 200, 
+        template: '[${index}/${total}] ${title}'
+    });
+})();
+</script>
