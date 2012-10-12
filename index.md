@@ -52,6 +52,7 @@ shots: [{
     klass: "no-shadow"
 }]
 ---
+THIS IS BETA1
 
 TEST35!
 
