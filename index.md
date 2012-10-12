@@ -52,7 +52,7 @@ shots: [{
     klass: "no-shadow"
 }]
 ---
-THIS IS BETA1
+THIS IS BETA2
 
 TEST35!
 
