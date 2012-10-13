@@ -5,4 +5,4 @@ layouts: base/layouts
 stylus:
   compress: true
   path: ./base/css/site.styl
-plugins: ../_plugins
+plugins: ../.jekyll-plugins
