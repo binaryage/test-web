@@ -14,6 +14,8 @@ subtitle: Visor
     </div>
 </div>
 
+
+
 ## What is Visor?
 
 Visor is a system-wide TotalFinder window displayed at the bottom of the screen. The idea is to have one dedicated TotalFinder instance always ready just one key press away. This functionality is inspired by [Terminal.app's Visor](http://visor.binaryage.com).
