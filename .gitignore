@@ -16,3 +16,4 @@ test/
 experimental/
 release/
 sparkle
+.sass-cache/
